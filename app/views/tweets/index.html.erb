@@ -1,0 +1,13 @@
+<h1>Tweets</h1>
+ 
+<form action='/tweets' method='post'>
+  <input type='text' name='author' placeholder='What is your name?'>
+  <input type='text' name='body' placeholder='Write your tweet here...'>
+  <input type='submit' value='Post Your Tweet'>
+</form>
+
+<ul>
+<% @tweets.each do |tweet| %>
+  <li><strong><%= tweet.author %>:</strong> <%= tweet.body %></li>  
+<% end %>
+</ul>
